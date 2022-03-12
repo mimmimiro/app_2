@@ -1,0 +1,10 @@
+:root {
+	--background: white;
+	/* --foreground: black; */
+
+	--font-family: cursive;
+	/* --font-size: 20px; */
+
+	/* --gap: 10px; */
+	--grid-column-12: repeat(12, 1fr);
+}
