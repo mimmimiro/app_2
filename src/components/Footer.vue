@@ -1,7 +1,7 @@
 <template>
 	<section class="container">
 <footer class="container__footer">
-<span class="container__header-motto">{{ motto }}</span>
+<span class="container__footer-motto">{{ motto }}</span>
 
 </footer>
 
@@ -35,7 +35,7 @@ export default {
 }
 
 
-.container__header-motto {
+.container__footer-motto {
 	grid-column: 1/ span 3;
 	font-size: 2.5rem;
 	color: rgb(97, 18, 25);
@@ -46,7 +46,8 @@ export default {
 
 @media screen and (max-width: 1024px) {
 .container__footer {
-	height: 400px;
+	height: 150px;
+	margin-top: 70px;
 }
 }
 
