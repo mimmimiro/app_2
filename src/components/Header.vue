@@ -59,10 +59,15 @@ export default {
 	
 }
 .container__header-logo {
+	transition: transform 1s ease-in-out;
 	grid-column: 1/ span 2;
 	grid-row: 1;
 	width: 50%;
 }
+
+.container__header-logo:hover {
+		transform: rotateZ(360deg);
+	}
 
 
 
