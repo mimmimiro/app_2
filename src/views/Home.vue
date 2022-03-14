@@ -155,10 +155,11 @@
 	} 
 
 	.container__main-button {
-		padding: 25px;
+		padding: 20px;
 		border: 1px solid #80a08a;
 		background-color: #80a08a;
-		border-radius: 30px;
+	   border-radius: 30px;
+		width: 350px;
 		margin: 10px 10px 25px 420px;
 		font-size: 1.6rem;
 		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
