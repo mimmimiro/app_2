@@ -169,7 +169,7 @@
 		color: rgb(53, 8, 15);
 		background-color: rgb(199, 116, 68);
 	}
-
+    /* small and medium devices */
 	@media screen and (max-width: 1024px) {
 		.container__title-list {
 			margin-left: 0px;
