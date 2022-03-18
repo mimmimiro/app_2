@@ -1,10 +1,10 @@
 <template>
-<section class="container">
-	<header class="container__header">
-		<img class="container__header-logo" src="/images/logo.png" alt="">
-		<span class="container__header-title">{{ title }}</span>
-	</header>	
-</section>
+	<section class="container">
+		<header class="container__header">
+			<img class="container__header-logo" src="/images/logo.png" alt="">
+			<span class="container__header-title">{{ title }}</span>
+		</header>	
+	</section>
 </template>
 
 
