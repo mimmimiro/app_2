@@ -1,25 +1,25 @@
 <template>
   <Header />
 	  <main>
-	   <div class="container__main" v-for="drink in cocktails" :key="drink.id">
-		  <div class="container__main-title">{{ drink.strDrink}}</div>
-		  <div class="container__version">VErsion:<br>{{ drink.strAlcoholic }}</div>
-		  <div class="container__category">CatEgory:<br>{{ drink.strGlass }}</div>
-		  <img class="container__main-image" :src=image>
-		 <div class="container__main-description">DESCRIPTION:<br>
-	    {{ drink.strInstructions}}</div>
-		<ul class="container__list">
-		  <li class="container__list-title">Ingredients:</li>
-		  <li class="container__main-list">{{ drink.strMeasure1 }}, {{ drink.strIngredient1 }}</li>
-		  <li class="container__main-list">{{ drink.strMeasure2 }}, {{ drink.strIngredient2 }} </li>
-		  <li class="container__main-list">{{ drink.strMeasure3 }}, {{ drink.strIngredient3 }}</li>
-		  <li class="container__main-list">{{ drink.strMeasure4 }} {{ drink.strIngredient4 }} </li>
-		  <li class="container__main-list">{{ drink.strMeasure5 }} {{ drink.strIngredient5 }} </li>
-		  <li class="container__main-list">{{ drink.strMeasure6 }} {{ drink.strIngredient6 }} </li>
-		  <li class="container__main-list">{{ drink.strMeasure7 }} {{ drink.strIngredient7 }}</li>
-	   </ul>
-      <button class="container__main-button" @click="fetchDrinks">Try a new drink</button>
-     </div>
+	   	<section class="container__main" v-for="drink in cocktails" :key="drink.id">
+				<h1 class="container__main-title">{{ drink.strDrink}}</h1>
+				<div class="container__version">VErsion:<br>{{ drink.strAlcoholic }}</div>
+				<div class="container__category">CatEgory:<br>{{ drink.strGlass }}</div>
+				<img class="container__main-image" :src=image>
+				<article class="container__main-description">DESCRIPTION:<br>
+				{{ drink.strInstructions}}</article>
+				<ul class="container__list">
+				<li class="container__list-title">Ingredients:</li>
+				<li class="container__main-list">{{ drink.strMeasure1 }}, {{ drink.strIngredient1 }}</li>
+				<li class="container__main-list">{{ drink.strMeasure2 }}, {{ drink.strIngredient2 }} </li>
+				<li class="container__main-list">{{ drink.strMeasure3 }}, {{ drink.strIngredient3 }}</li>
+				<li class="container__main-list">{{ drink.strMeasure4 }} {{ drink.strIngredient4 }} </li>
+				<li class="container__main-list">{{ drink.strMeasure5 }} {{ drink.strIngredient5 }} </li>
+				<li class="container__main-list">{{ drink.strMeasure6 }} {{ drink.strIngredient6 }} </li>
+				<li class="container__main-list">{{ drink.strMeasure7 }} {{ drink.strIngredient7 }}</li>
+				</ul>
+			<button class="container__main-button" @click="fetchDrinks">Try a new drink</button>
+    	 </section>
 	</main>
   <Footer />
 	
@@ -45,6 +45,9 @@
 
 	},
 	methods: {
+		//  an asynchronous HTTP request in JavaScript/vue with the deconstructed fetch method
+		// it offers an eloquent way to establish agile communication between client and server.
+		// fetch returns a promise, wich allows us to handle the asynchronous request in a smarter way
 		async fetchDrinks() {
       const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 		const response = await fetch(url); 
@@ -55,6 +58,7 @@
 			this.error = error;
 		}
 	},
+	// The catch() function is only used if fetch() could not send a request. This typically means that there was an error
 	async handleResponse(response) {
 			if(response.status >= 200 && response.status < 300)  {
 				console.log('it works');
